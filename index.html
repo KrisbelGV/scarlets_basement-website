@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet's basement</title>
+    <script src="js/dark-mode-preload.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/footer.css">
+    <link rel="stylesheet" href="css/components/features.css">
+    <link rel="stylesheet" href="css/components/modal.css">
+    <link rel="stylesheet" href="css/components/login.css">
+    <link rel="stylesheet" href="css/components/alerts.css">
+    <link rel="stylesheet" href="css/components/faq.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="assets/favicon.png" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <a href="./index.html">
+                    <img class="nav__logo" src="./assets/logo.png" alt="Logo">
+                </a>
+
+                <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+                    <img class="nav__toggle-icon" src="./assets/hamburger.svg" alt="Menu">
+                </button>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="./pages/search.html">Advanced search</a></li>
+                        <li class="nav__dropdown">
+                            <a class="nav__link" href="#">Toolbox<img class="nav__arrow" src="assets/arrow_white.svg" alt=""></a>
+                            <ul class="nav__dropdown-menu">
+                                <li><a class="nav__link nav__link--sub" href="./pages/studio.html">Find a studio</a></li>
+                                <li><a class="nav__link nav__link--sub" href="./pages/indexed.html">Is it indexed?</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav__link" href="./pages/view.html">A new view</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./pages/about.html">About</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./pages/settings.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__icons">
+                    <a class="nav__icon-link" href="./pages/about.html"><img class="nav__icon" src="./assets/about.svg" alt="About"></a>
+                    <a class="nav__icon-link" href="./pages/settings.html"><img class="nav__icon" src="./assets/settings.svg" alt="Settings"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="tutorial-login-section">
+            <figure class="tutorial-container">
+                <iframe class="tutorial-embed" src="https://scratch.mit.edu/projects/1299023270/embed" allowtransparency="true" frameborder="0" scrolling="no" allowfullscreen></iframe>
+            </figure>
+        </section>
+
+        <section class="features-section">
+            <div class="features-grid">
+                
+                <figure class="feature-card">
+                    <a class="feature-link" href="./pages/search.html">
+                        <div class="feature-card__icon-container feature-card__icon-container--green">
+                            <img class="feature-card__icon" src="assets/search.svg" alt="Search icon">
+                        </div>
+                        <figcaption class="feature-card__content">
+                            <h2 class="feature-card__title">Advanced search</h2>
+                            <p class="feature-card__text">
+                                Easily find projects using filtering options across all of Scratch or just your following. *General search does not require login.
+                            </p>
+                        </figcaption>
+                    </a>
+                </figure>
+
+                <figure class="feature-card">
+                    <a class="feature-link" href="#" id="toolbox-card-link">
+                        <div class="feature-card__icon-container feature-card__icon-container--red">
+                            <img class="feature-card__icon" src="assets/toolbox.svg" alt="Toolbox icon">
+                        </div>
+                        <figcaption class="feature-card__content">
+                            <h2 class="feature-card__title">Toolbox</h2>
+                            <p class="feature-card__text">
+                                A simple set of tools to understand the current status of your creations and help them reach more users and communities with the same interests.
+                            </p>
+                        </figcaption>
+                    </a>
+                </figure>
+
+                <figure class="feature-card">
+                    <a class="feature-link" href="./pages/view.html">
+                        <div class="feature-card__icon-container feature-card__icon-container--yellow">
+                            <img class="feature-card__icon" src="assets/views.svg" alt="Views icon">
+                        </div>
+                        <figcaption class="feature-card__content">
+                            <h2 class="feature-card__title">A new view</h2>
+                            <p class="feature-card__text">
+                                The perfect opportunity to contribute unrecognized work! Give your following that always rewarded helping hand. *Requires an active login.
+                            </p>
+                        </figcaption>
+                    </a>
+                </figure>
+
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <div class="faq-accordion">
+                
+                <details class="faq-item" open>
+                    <summary class="faq-question">What is Scarlet's basement and how does it work?</summary>
+                    <div class="faq-content">
+                        <div>
+                            <p>It acts as an intermediary between the public information provided by Scratch and our users, adding an extra layer of filtering. The service offers a set of exclusive and complementary utilities that we hope you will find useful.</p>
+                        </div>
+                    </div>
+                </details>
+        
+                <details class="faq-item">
+                    <summary class="faq-question">Is the project associated with Scratch?</summary>
+                    <div class="faq-content">
+                        <div>
+                            <p>No. It is an independent tool developed by KrisbelGV. Its long-term maintenance is neither defined nor ruled out, so we recommend that our users stay tuned for the latest updates.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary class="faq-question">Who is Scarlet?</summary>
+                    <div class="faq-content">
+                        <div>
+                            <p>She is my OC (original character), illustrated by me. She is not one of the characters registered by MIT, and any connection to them in their stories is purely fan fiction.</p>
+                    </div>
+                </details>
+        
+                <details class="faq-item">
+                    <summary class="faq-question">What are your privacy policies?</summary>
+                    <div class="faq-content">
+                        <div>
+                            <p>It adheres to high security standards, in line with the educational platform, using a rate limiting system and IP blocking with encryption. If you disagree with these policies, please cancel your use immediately. You can modify the other options in your browser's settings.</p>
+                        </div>
+                    </div>
+                </details>
+        
+                <details class="faq-item">
+                    <summary class="faq-question">My question isn't showing up.</summary>
+                    <div class="faq-content">
+                        <div>
+                            <p>We'd love to hear your opinions and suggestions. Please post them in our official Scratch forum thread, and we'll do your best to answer your questions as soon as possible.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="assets/github.svg" alt="">
+                            Source code
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="assets/scratch_white_favicon.svg" alt="">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="assets/studio.svg" alt="">
+                            Studio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="footer__credits">
+                <p>Made by <a class="footer__link--highlight" href="">KrisbelGV</a> as an educational project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/api.js"></script>
+    <script src="js/api-config.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/dark-mode.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,238 @@
+
+.studio-section {
+    margin: 16px;
+    padding: 24px;
+    width: 95%;
+    max-width: 75rem;
+    background-color: var(--color-card-bg);
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.studio-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+}
+
+.studio-bar-container {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    flex-wrap: nowrap;
+}
+
+.studio-toggle-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    transition: transform 0.3s ease;
+}
+
+.studio-toggle-btn img {
+    width: 1.2rem;
+}
+
+.studio-toggle-btn.is-active img {
+    transform: rotate(180deg);
+}
+
+.studio-input {
+    flex: 4;
+    height: 2.8rem;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    flex-shrink: 0;
+    min-width: 0;
+    width: auto;
+}
+
+.studio-btn {
+    width: 3.5rem;
+    height: 2.8rem;
+    background-color: var(--color-btn-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.studio-btn:hover {
+    filter: brightness(1.2);
+}
+
+.studio-btn img {
+    width: 2rem;
+    height: auto;
+}
+
+.studio-advanced-options {
+    display: none;
+    width: 100%;
+}
+
+.studio-advanced-options.is-visible {
+    display: block;
+}
+
+.studio-advanced-options__grid {
+    min-width: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.studio-option-card {
+    background-color: var(--color-card-middle);
+    padding: 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-sizing: border-box;
+    max-width: 100%;
+    min-width: 0;
+}
+
+.studio-option-card__title {
+    font-size: 1rem;
+    color: var(--color-base-black);
+    margin-bottom: 0.5rem;
+}
+
+.studio-btn--small {
+    width: 2.8rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.studio-dynamic-list {
+    list-style: none;
+    padding: 0.5rem;
+    border: 1px solid var(--color-primary-light);
+    border-radius: 0.4rem;
+    background-color: white;
+    min-height: 40px;
+    margin-bottom: 10px;
+}
+
+.studio-dynamic-list li {
+    padding: 0.3rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.studio-dynamic-list li:last-child {
+    border-bottom: none;
+}
+
+.studio-dynamic-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.studio-btn-delete-item {
+    background-color: var(--color-danger-red);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.studio-btn-delete-item:hover {
+    filter: brightness(1.2);
+}
+
+.studio-input-wrapper {
+    position: relative;
+    flex: 4;
+    min-width: 0;
+}
+
+.studio-input-hash {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-base-black);
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 1rem;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.studio-input--with-hash {
+    padding-left: 28px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.studio-option-card__note {
+    font-size: 0.8rem;
+    color: var(--color-warn-text);
+    background-color: var(--color-warn-bg);
+    border: 1px solid var(--color-warn-border);
+    border-radius: 6px;
+    padding: 10px;
+    margin-top: 10px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+html.dark-mode .studio-input {
+    background-color: #1a2a45;
+    border-color: #2a3a55;
+    color: #d0ddf0;
+}
+
+html.dark-mode .studio-input::placeholder {
+    color: #6a7a99;
+}
+
+html.dark-mode .studio-dynamic-list {
+    background-color: #1a2a45;
+    border-color: #2a3a55;
+}
+
+html.dark-mode .studio-dynamic-list li {
+    border-bottom-color: #2a3a55;
+}
+
+html.dark-mode .studio-dynamic-item {
+    border-bottom-color: #2a3a55;
+}
+
+html.dark-mode .studio-input-hash {
+    color: #d0ddf0;
+}
+
+@media (max-width: 800px) {
+    .studio-form {
+        width: 90%;
+    }
+}

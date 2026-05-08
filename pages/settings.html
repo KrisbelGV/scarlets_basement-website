@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet's basement - Settings</title>
+    <script src="../js/dark-mode-preload.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/settings.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <a href="../index.html">
+                    <img class="nav__logo" src="../assets/logo.png" alt="Logo">
+                </a>
+
+                <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+                    <img class="nav__toggle-icon" src="../assets/hamburger.png" alt="Menu">
+                </button>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="./search.html">Advanced search</a></li>
+                        <li class="nav__dropdown">
+                            <a class="nav__link" href="#">Toolbox<img class="nav__arrow" src="../assets/arrow_white.svg" alt=""></a>
+                            <ul class="nav__dropdown-menu">
+                                <li><a class="nav__link nav__link--sub" href="./studio.html">Find a studio</a></li>
+                                <li><a class="nav__link nav__link--sub" href="./indexed.html">Is it indexed?</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav__link" href="./view.html">A new view</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./about.html">About</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./settings.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__icons">
+                    <a class="nav__icon-link" href="./about.html"><img class="nav__icon" src="../assets/about.svg" alt="About"></a>
+                    <a class="nav__icon-link" href="./settings.html"><img class="nav__icon" src="../assets/settings.svg" alt="Settings"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main--centered">
+        <section class="settings-section">
+            
+            <h1 class="settings-title">Settings</h1>
+
+            <p class="settings-text">
+                Manage your preferences and local data. Scarlet's Basement stores some information 
+                in your browser to improve performance and remember your session. You can clear 
+                this data at any time.
+            </p>
+
+            <div class="settings-group">
+                <label class="settings-toggle">
+                    <span class="settings-toggle__label">Dark mode</span>
+                    <span class="settings-toggle__description">Switch between light and dark color themes</span>
+                    <input class="settings-toggle__input" type="checkbox" id="dark-mode-toggle">
+                    <span class="settings-toggle__switch"></span>
+                </label>
+            </div>
+
+            <div class="settings-group">
+                <div class="settings-stats">
+                    <div class="settings-stat">
+                        <span class="settings-stat__label">Cache entries</span>
+                        <span class="settings-stat__value" id="cache-count">Calculating...</span>
+                    </div>
+                    <div class="settings-stat">
+                        <span class="settings-stat__label">Storage used</span>
+                        <span class="settings-stat__value" id="cache-size">Calculating...</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="settings-group">
+                <button class="settings-btn settings-btn--danger" id="clear-cache-btn" type="button">
+                    Clear all cache data
+                </button>
+                <p class="settings-note">
+                    This will remove all locally stored data, including your login session. 
+                    You will be redirected to the homepage.
+                </p>
+            </div>
+
+            <div class="settings-toast" id="settings-toast" aria-live="polite">
+                <span class="settings-toast__message"></span>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/github.svg" alt="">
+                            Source code
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/scratch_white_favicon.svg" alt="">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/studio.svg" alt="">
+                            Studio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="footer__credits">
+                <p>Made by <a class="footer__link--highlight" href="">KrisbelGV</a> as an educational project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/settings.js"></script>
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

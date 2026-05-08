@@ -1,0 +1,87 @@
+@media (max-width: 800px) {
+    .nav__icons { 
+        display: none; 
+    }
+    
+    .nav__toggle {
+        padding: 0.6rem;
+        border-radius: 0.6rem;
+        background-color: var(--color-primary-light);
+        display: block;
+        z-index: 102;
+        position: fixed;
+        top: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .nav__link--mobile { 
+        display: block; 
+        text-align: center; 
+    }
+
+    .nav__wrapper { 
+        position: relative; 
+        width: 100%; 
+        padding: 0 16px; 
+    }
+
+    .nav__menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: fit-content;
+        min-width: 250px;
+        height: 100vh;
+        background-color: var(--color-primary-light);
+        display: flex;
+        flex-direction: column;
+        z-index: 100;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    }
+
+    .nav__menu.is-open { 
+        right: 0; 
+    }
+
+    .nav__list { 
+        flex-direction: column; 
+        width: 100%; 
+        align-items: stretch; 
+        margin-top: 48px;
+    }
+
+    .nav__link { 
+        height: auto;
+        width: 100%;
+        padding: 20px;
+        justify-content: center;
+        display: flex;
+    }
+
+    .tutorial-login-section { 
+        flex-direction: column;
+    }
+
+    .tutorial-container {
+        aspect-ratio: 16 / 9;
+        height: auto;
+        min-height: auto;
+    }
+
+    .tutorial-embed {
+        height: 422px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .advanced-options__grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .results-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

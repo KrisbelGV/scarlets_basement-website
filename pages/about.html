@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet's basement - About</title>
+    <script src="../js/dark-mode-preload.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/about.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <a href="../index.html">
+                    <img class="nav__logo" src="../assets/logo.png" alt="Logo">
+                </a>
+
+                <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+                    <img class="nav__toggle-icon" src="../assets/hamburger.svg" alt="Menu">
+                </button>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="./search.html">Advanced search</a></li>
+                        <li class="nav__dropdown">
+                            <a class="nav__link" href="#">Toolbox<img class="nav__arrow" src="../assets/arrow_white.svg" alt=""></a>
+                            <ul class="nav__dropdown-menu">
+                                <li><a class="nav__link nav__link--sub" href="./studio.html">Find a studio</a></li>
+                                <li><a class="nav__link nav__link--sub" href="./indexed.html">Is it indexed?</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav__link" href="./view.html">A new view</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./about.html">About</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./settings.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__icons">
+                    <a class="nav__icon-link" href="./about.html"><img class="nav__icon" src="../assets/about.svg" alt="About"></a>
+                    <a class="nav__icon-link" href="./settings.html"><img class="nav__icon" src="../assets/settings.svg" alt="Settings"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main--centered" style="flex-direction: column; align-items: center;">
+        
+        <section class="about-section">
+            <img class="about-logo" src="../assets/logo.png" alt="Scarlet's Basement Logo">
+            <h1 class="about-title">About Scarlet's Basement</h1>
+            
+            <p class="about-text">
+                Scarlet's Basement is an independent companion tool designed to enhance the Scratch experience. 
+                It acts as a filtering layer on top of Scratch's public information, offering advanced search, 
+                project indexing checks, studio discovery, and community-focused features that help users 
+                explore and share content more effectively.
+            </p>
+            
+            <p class="about-text">
+                This project was developed by <strong>KrisbelGV</strong> to serve as a practical 
+                complement to the Scratch platform. It is purely educational and demonstrative 
+                in nature, with <strong>no affiliation to Scratch or the Scratch Foundation</strong>. 
+                Everyone is welcome to explore, learn from, and contribute to the project.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2 class="about-title about-subtitle">Privacy & Transparency</h2>
+            
+            <p class="about-text">
+                Scarlet's Basement is committed to transparency and user privacy. This page explains exactly 
+                what data is stored, how it is used, and what rights you have.
+            </p>
+
+            <div class="about-subsection">
+                <h3>Data Stored Locally</h3>
+                <p class="about-text about-text--left">
+                    All data is stored exclusively in your browser using two standard web storage APIs. 
+                    No information is ever sent to external servers beyond what is strictly necessary to 
+                    fulfill your search requests to the Scratch API.
+                </p>
+                <ul class="about-list">
+                    <li><strong>sessionStorage</strong> (temporary, cleared when you close the tab):
+                        <ul>
+                            <li>Your most recent search results (up to 24 items) and their associated filters (query, discard words, and profiles).</li>
+                            <li>Your most recent studio search results (up to 24 items) and their associated project ID and tags.</li>
+                            <li>These caches expire automatically after 30 minutes of inactivity and are never transmitted anywhere.</li>
+                        </ul>
+                    </li>
+                    <li style="margin-top: 0.75rem;"><strong>localStorage</strong> (persistent, survives browser restarts):
+                        <ul>
+                            <li>Your Scratch username and public profile statistics (followers, following, shared projects, views, loves, favorites) to avoid re-fetching on every visit. This cache expires after 24 hours.</li>
+                            <li>A timestamp of your last reload action to enforce a 30-minute cooldown.</li>
+                            <li>Your dark mode preference (enabled or disabled).</li>
+                            <li>A record of which informational alerts you have dismissed, so they are not shown again.</li>
+                            <li>A global retry timestamp used when external services (Scratch API or Upstash) are temporarily unavailable, to prevent unnecessary repeated requests.</li>
+                            <li>A lightweight cache of the first batch of projects from "A New View" to provide instant feedback on subsequent visits (expires after 24 hours).</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <h3>What We Do NOT Store or Track</h3>
+                <ul class="about-list">
+                    <li>We do <strong>not</strong> use cookies.</li>
+                    <li>We do <strong>not</strong> track your browsing activity, search history, or navigation patterns.</li>
+                    <li>We do <strong>not</strong> collect, store, or transmit your IP address beyond the temporary hashed rate-limiting check performed by our backend (the hash is automatically deleted after 24 hours).</li>
+                    <li>We do <strong>not</strong> use any form of analytics, telemetry, or user profiling.</li>
+                    <li>We do <strong>not</strong> share, sell, or transfer any data to third parties under any circumstances.</li>
+                    <li>We do <strong>not</strong> display advertisements or embed third-party tracking scripts.</li>
+                </ul>
+
+                <h3>Your Control</h3>
+                <p class="about-text about-text--left">
+                    You can clear all locally stored data at any time from the 
+                    <a href="./settings.html" class="about-link-inline">Settings</a> page. 
+                    This will remove your login session, cached results, and preferences. You will be 
+                    redirected to the homepage.
+                </p>
+            </div>
+        </section>
+
+        <section class="about-section">
+            <h2 class="about-title about-subtitle">Terms of Service & Disclaimer</h2>
+            
+            <div class="about-subsection">
+                <p class="about-text about-text--left">
+                    Scarlet's Basement is provided <strong>free of charge</strong>, on an <strong>"as is"</strong> basis, 
+                    without warranties of any kind, either express or implied. By accessing or using this website, 
+                    you acknowledge and agree to the following:
+                </p>
+                <ul class="about-list">
+                    <li>The service may experience interruptions, errors, or periods of unavailability. We do not guarantee continuous, uninterrupted access.</li>
+                    <li>Search results depend entirely on the public Scratch API and may be incomplete, outdated, or inaccurate. We are not responsible for the content of any external project, studio, or user profile.</li>
+                    <li>Features and functionality may change or be discontinued at any time without prior notice.</li>
+                    <li>We are not responsible for any loss, damage, or inconvenience resulting from the use or inability to use this service.</li>
+                    <li>You are solely responsible for ensuring that your use of this tool complies with the Scratch Terms of Service and Community Guidelines.</li>
+                    <li>By continuing to navigate this site, you accept these terms in their entirety. If you do not agree, please discontinue use immediately.</li>
+                </ul>
+
+                <p class="about-text about-text--left">
+                    For questions, suggestions, or concerns, please reach out through our official Scratch forum thread 
+                    or open an issue on GitHub.
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/github.svg" alt="">
+                            Source code
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/scratch_white_favicon.svg" alt="">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/studio.svg" alt="">
+                            Studio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="footer__credits">
+                <p>Made by <a class="footer__link--highlight" href="">KrisbelGV</a> as an educational project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

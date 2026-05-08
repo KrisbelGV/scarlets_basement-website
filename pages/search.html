@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scarlet's basement - Advanced Search</title>
+    <script src="../js/dark-mode-preload.js"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/components/header.css">
+    <link rel="stylesheet" href="../css/components/footer.css">
+    <link rel="stylesheet" href="../css/components/alerts.css">
+    <link rel="stylesheet" href="../css/components/projects.css">
+    <link rel="stylesheet" href="../css/components/search.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+    <link rel="icon" href="../assets/favicon.png" type="image/svg+xml">
+</head>
+<body>
+    
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__wrapper">
+                <a href="../index.html">
+                    <img class="nav__logo" src="../assets/logo.png" alt="Logo">
+                </a>
+
+                <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+                    <img class="nav__toggle-icon" src="../assets/hamburger.svg" alt="Menu">
+                </button>
+
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li><a class="nav__link" href="./search.html">Advanced search</a></li>
+                        <li class="nav__dropdown">
+                            <a class="nav__link" href="#">Toolbox<img class="nav__arrow" src="../assets/arrow_white.svg" alt=""></a>
+                            <ul class="nav__dropdown-menu">
+                                <li><a class="nav__link nav__link--sub" href="./studio.html">Find a studio</a></li>
+                                <li><a class="nav__link nav__link--sub" href="./indexed.html">Is it indexed?</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav__link" href="./view.html">A new view</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./about.html">About</a></li>
+                        <li><a class="nav__link nav__link--mobile" href="./settings.html">Settings</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__icons">
+                    <a class="nav__icon-link" href="./about.html"><img class="nav__icon" src="../assets/about.svg" alt="About"></a>
+                    <a class="nav__icon-link" href="./settings.html"><img class="nav__icon" src="../assets/settings.svg" alt="Settings"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main--centered">
+        <section class="search-section">
+            <form class="search-form">
+                <aside class="info" id="info-search">
+                    <button class="info__close" aria-label="Close alert" type="button">
+                        <img src="../assets/x_yellow.svg" alt="Close">
+                    </button>
+                    <strong>Important information:</strong> To ensure better search results, Scratch metadata has been ignored.
+                </aside>
+                <div class="search-bar-container">
+                    <input class="search-input" type="text" id="project-title" placeholder="Project title">
+                    <button class="search-btn" type="submit">
+                        <img src="../assets/search.svg" alt="Search">
+                    </button>
+                </div>
+    
+                <button type="button" class="toggle-btn" id="toggle-options" aria-expanded="false" aria-controls="advanced-options">
+                    <img src="../assets/arrow_blue.svg" alt="Advanced options">
+                </button>
+    
+                <div class="advanced-options" id="advanced-options">
+                    <div class="advanced-options__grid">
+                        <section class="option-card">
+                            <h3 class="option-card__title">By following</h3>
+                            <div class="search-bar-container">
+                                <input class="search-input" type="text" placeholder="Name">
+                                <button class="search-btn search-btn--small" type="button">+</button>
+                            </div>
+                            <ul class="dynamic-list">
+                            </ul>
+                        </section>
+                
+                        <section class="option-card">
+                            <h3 class="option-card__title">Words to discard</h3>
+                            <div class="search-bar-container">
+                                <input class="search-input" type="text" placeholder="Word">
+                                <button class="search-btn search-btn--small" type="button">+</button>
+                            </div>
+                            <ul class="dynamic-list">
+                            </ul>
+                        </section>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <nav class="footer__nav">
+                <ul class="footer__list">
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/github.svg" alt="">
+                            Source code
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/scratch_white_favicon.svg" alt="">
+                            FAQ
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__link" href="#">
+                            <img class="footer__icon" src="../assets/studio.svg" alt="">
+                            Studio
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="footer__credits">
+                <p>Made by <a class="footer__link--highlight" href="">KrisbelGV</a> as an educational project.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/api.js"></script>
+    <script src="../js/api-config.js"></script>
+    <script src="../js/projects.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="../js/dark-mode.js"></script>
+    <script src="../js/navigation.js"></script>
+    <script src="../js/search.js"></script>
+</body>
+</html>
