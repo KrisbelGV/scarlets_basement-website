@@ -350,6 +350,7 @@ function createStudioCard(studio) {
     link.className = 'studio-link';
     link.href = `https://scratch.mit.edu/studios/${studio.id}`;
     link.target = '_blank';
+    link.rel = 'noopener noreferrer';
     
     const card = document.createElement('div');
     card.className = 'studio-card';
@@ -361,7 +362,7 @@ function createStudioCard(studio) {
     `;
     
     link.appendChild(card);
-    return card;
+    return link;
 }
 
 if (studioSection) {

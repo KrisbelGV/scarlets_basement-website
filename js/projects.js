@@ -192,7 +192,6 @@ async function loadFollowingProjectsFresh(container, username) {
     } catch (error) {
         loader.remove();
         
-        // Manejar errores globales de retry
         if (error.message.startsWith('GLOBAL_RETRY:')) {
             const parts = error.message.split(':');
             const seconds = parseInt(parts[1]);
@@ -237,6 +236,7 @@ function createFollowingProjectCard(project) {
     link.className = 'project-link';
     link.href = `https://scratch.mit.edu/projects/${project.projectId}`;
     link.target = '_blank';
+    link.rel = 'noopener noreferrer';
     
     const card = document.createElement('div');
     card.className = 'project-card';
