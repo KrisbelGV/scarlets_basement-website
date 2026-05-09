@@ -12,7 +12,7 @@
 
 Frontend client for the Scarlet's Basement proxy. A lightweight, dependency-free interface that connects to the Scratch public API through the proxy server, providing advanced search, project indexing checks, studio discovery, and a personalized following feed.
 
-Created by [KrisbelGV](https://github.com/KrisbelGV) as part of the educational and learning project "Scarlet's Basement" available on the [Scarlet's Basement Website](https://krisbelgv.github.io/scarlet-basement-website/).
+Created by [KrisbelGV](https://github.com/KrisbelGV) as part of the educational and learning project ["Scarlet's Basement"](https://krisbelgv.github.io/scarlets_basement-website/pages/about.html) available on the [Scarlet's Basement Website](https://krisbelgv.github.io/scarlets_basement-website/).
 
 > *"Scarlet's Basement is an independent companion tool designed to enhance the Scratch experience. It acts as a filtering layer on top of Scratch's public information, offering advanced search, project indexing checks, studio discovery, and community-focused features that help users explore and share content more effectively."*
 >
@@ -183,7 +183,7 @@ Scarlet's Basement stores all data exclusively in your browser using `localStora
 | Following feed cache | localStorage | 24 hours |
 | Global retry timestamp | localStorage | 24 hours |
 
-For full details, see the [About page](https://krisbelgv.github.io/scarlet-basement-website/pages/about.html).
+For full details, see the [About page](https://krisbelgv.github.io/scarlets_basement-website/pages/about.html).
 
 ## License
 
