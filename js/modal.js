@@ -3,7 +3,33 @@
     
     const FIRST_VISIT_KEY = 'scarlet_first_visit_accepted';
     
-    if (localStorage.getItem(FIRST_VISIT_KEY) === 'true') {
+    function isFirstVisitAccepted() {
+        try {
+            if (localStorage.getItem(FIRST_VISIT_KEY) === 'true') {
+                return true;
+            }
+        } catch (e) {}
+        
+        try {
+            if (sessionStorage.getItem(FIRST_VISIT_KEY) === 'true') {
+                return true;
+            }
+        } catch (e) {}
+        
+        return false;
+    }
+    
+    function setFirstVisitAccepted() {
+        try {
+            localStorage.setItem(FIRST_VISIT_KEY, 'true');
+        } catch (e) {
+            try {
+                sessionStorage.setItem(FIRST_VISIT_KEY, 'true');
+            } catch (e2) {}
+        }
+    }
+    
+    if (isFirstVisitAccepted()) {
         return;
     }
     
@@ -24,7 +50,7 @@
             <div class="first-visit-modal">
                 <img class="first-visit-modal__logo" src="${basePath}assets/logo.png" alt="Scarlet's Basement Logo">
                 
-                <h2 class="first-visit-modal__title" id="first-visit-title">Welcome to Scarlet's Basement!</h2>
+                <h2 class="first-visit-modal__title" id="first-visit-title">Nice to see you here!</h2>
                 
                 <div class="first-visit-modal__text">
                     <p style="margin-bottom: 0.75rem;">
@@ -58,12 +84,7 @@
         const acceptBtn = overlay.querySelector('#first-visit-accept-btn');
         acceptBtn.addEventListener('click', () => {
             overlay.classList.remove('is-visible');
-            
-            try {
-                localStorage.setItem(FIRST_VISIT_KEY, 'true');
-            } catch (e) {
-            }
-            
+            setFirstVisitAccepted();
             setTimeout(() => {
                 overlay.remove();
             }, 300);
@@ -85,7 +106,12 @@
     }
     
     window.resetFirstVisitModal = function() {
-        localStorage.removeItem(FIRST_VISIT_KEY);
+        try {
+            localStorage.removeItem(FIRST_VISIT_KEY);
+        } catch (e) {}
+        try {
+            sessionStorage.removeItem(FIRST_VISIT_KEY);
+        } catch (e) {}
     };
     
 })();
